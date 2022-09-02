@@ -1,0 +1,98 @@
+.page-content {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+}
+
+.wrapper {
+    max-width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--spacing-smart);
+    padding-right: var(--spacing-smart);
+}
+
+.full-bg {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+ul,
+ol {
+    &.seamless {
+        list-style: none;
+        padding: 0;
+    }
+}
+
+.btn {
+    @extend button;
+    text-decoration: none;
+}
+
+.embed {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.2%;
+
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.hero {
+    padding: var(--spacing);
+    background-color: $brand-color;
+    color: $background-color;
+
+    @include media-greater($on-laptop) {
+        padding: var(--spacing-m);
+    }
+
+    > :first-child {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    &--dark {
+        @extend .hero;
+        background-color: $grey-color-dark;
+    }
+
+    &--light {
+        @extend .hero;
+        background-color: $grey-color-light;
+        color: $text-color;
+    }
+
+    .wrapper {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+
+    svg {
+        display: block;
+        width: 1em;
+        height: 1em;
+        color: inherit;
+
+        > * {
+            fill: currentColor;
+        }
+    }
+}

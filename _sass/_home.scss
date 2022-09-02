@@ -1,0 +1,15 @@
+.home-banner {
+    @extend .hero--dark;
+
+    &__content {
+        @extend .wrapper;
+    }
+}
+
+.home-intro {
+    @extend .hero--light;
+
+    &__content {
+        @extend .wrapper;
+    }
+}

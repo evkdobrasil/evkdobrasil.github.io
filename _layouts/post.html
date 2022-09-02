@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<section class="post-container" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="post-header">
+    {%- if page.image != '' -%}
+    <img src="{{ page.image }}" alt="{{ page.title }}" width="100%">
+    {%- endif -%}
+
+    <div class="wrapper">
+      <h1 class="post-title" itemprop="name headline">{{ page.title }}</h1>
+
+      <div class="post-toolbar">
+        <p class="post-meta">
+          <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+            {%- include locale-date.html date = page.date -%}
+          </time>
+          {%- if page.author -%}
+          •
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">{{ page.author }}</span>
+          </span>
+          {%- endif -%}
+        </p>
+        {%- include share.html position='cabeçalho' -%}
+      </div>
+
+    </div>
+  </header>
+
+  <div class="post-content--grid" itemprop="articleBody">
+    <article>
+      {{ content }}
+
+      {%- include share.html position='post' -%}
+    </article>
+  </div>
+
+  <nav class="post-navigation">
+    <span class="prev">
+      {%- if page.previous.url -%}
+      <a href="{{ page.previous.url | prepend: site.baseurl }}">&laquo; {% if page.previous.titulo %}{{
+        page.previous.titulo }}{% else %}{{page.previous.title}}{% endif %}</a>
+      {%- endif -%}
+    </span>
+    <span class="post-navigation__separator"></span>
+    <span class="next">
+      {%- if page.next.url -%}
+      <a href="{{ page.next.url | prepend: site.baseurl }}">{% if page.next.titulo %}{{ page.next.titulo }}{% else
+        %}{{page.next.title}}{% endif %} &raquo;</a>
+      {%- endif -%}
+    </span>
+  </nav>
+
+</section>
