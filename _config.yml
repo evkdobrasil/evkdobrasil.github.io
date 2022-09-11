@@ -27,6 +27,7 @@ markdown: kramdown
 permalink: pretty/
 paginate: 10
 paginate_path: "/blog/:num/"
+ga_id: ''
 sass:
   style: compressed
 plugins:
