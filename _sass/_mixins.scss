@@ -18,7 +18,7 @@
     &:hover, &:focus, &:active {
         background-color: $fore-color;
         color: $color;
-        box-shadow: 0 0 0 3px $color;
+        box-shadow: 0 0 0 1px $color;
     }
 }
 

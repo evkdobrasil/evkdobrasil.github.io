@@ -1,6 +1,6 @@
 .page-content {
-    padding-top: var(--spacing-m);
-    padding-bottom: var(--spacing-m);
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
 }
 
 .wrapper {
@@ -48,12 +48,13 @@ ol {
 }
 
 .hero {
-    padding: var(--spacing);
-    background-color: $brand-color;
-    color: $background-color;
+    padding-top: var(--spacing);
+    padding-bottom: var(--spacing);
+    background-color: $brand-color-1;
 
     @include media-greater($on-laptop) {
-        padding: var(--spacing-m);
+        padding-top: var(--spacing-m);
+        padding-bottom: var(--spacing-m);
     }
 
     > :first-child {
@@ -64,20 +65,21 @@ ol {
         margin-bottom: 0;
     }
 
+    &--naked {
+        @extend .hero;
+        background-color: unset;
+    }
+
     &--dark {
         @extend .hero;
-        background-color: $grey-color-dark;
+        background-color: #000;
+        color: $brand-color-1;
     }
 
     &--light {
         @extend .hero;
         background-color: $grey-color-light;
         color: $text-color;
-    }
-
-    .wrapper {
-        padding-left: 0;
-        padding-right: 0;
     }
 }
 

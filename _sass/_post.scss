@@ -31,11 +31,9 @@
 }
 
 .post-title {
-    text-transform: uppercase;
-    font-weight: bold;
-    letter-spacing: 10px;
-    color: #000;
-    text-shadow: -3px 3px 0 $brand-color, 6px -3px 0 $grey-color-light;
+    margin-top: var(--spacing-m);
+    margin-bottom: var(--spacing-m);
+    font-size: 2.2em;
 }
 
 .post-toolbar {

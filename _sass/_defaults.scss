@@ -32,7 +32,7 @@ blockquote {
     margin-left: 0;
     margin-right: 0;
     padding-left: var(--spacing-s);
-    border-left: var(--spacing-s) solid $brand-color;
+    border-left: var(--spacing-s) solid $grey-color;
     font-size: 1.275em;
     font-style: italic;
     color: $grey-color;
@@ -45,7 +45,7 @@ h4,
 h5,
 h6 {
     font-family: $title-font-family;
-    font-weight: normal;
+    font-weight: lighter;
 }
 
 @for $i from 1 through 6 {
@@ -60,7 +60,7 @@ h6 {
 
 a {
     @extend %transition;
-    color: $brand-color;
+    color: $brand-color-4;
     text-decoration: none;
 
     &:hover, &:focus, &:active {

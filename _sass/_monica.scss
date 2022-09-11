@@ -37,9 +37,9 @@ html {
     --spacing-s: 16px;
     --spacing-xs: 8px;
 
-    --spacing-smart: var(--spacing);
+    --spacing-smart: var(--spacing-m);
 
     @media (max-width: $on-laptop) {
-        --spacing-smart: var(--spacing-s)
+        --spacing-smart: var(--spacing)
     }
 }
