@@ -1,100 +1,115 @@
+.main-container {
+  width: $content-width;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #fff;
+  box-shadow: 0 0 15px rgba(black, 0.3);
+}
+
 .page-content {
-    padding-top: var(--spacing);
-    padding-bottom: var(--spacing);
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
 }
 
 .wrapper {
-    max-width: $content-width;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: var(--spacing-smart);
-    padding-right: var(--spacing-smart);
+  padding-left: var(--spacing-smart);
+  padding-right: var(--spacing-smart);
 }
 
 .full-bg {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.img-wrapper {
+  overflow: hidden;
+  border-radius: var(--border-radius);
+
+  img {
+    display: block;
+  }
 }
 
 ul,
 ol {
-    &.seamless {
-        list-style: none;
-        padding: 0;
-    }
+  &.seamless {
+    list-style: none;
+    padding: 0;
+  }
 }
 
 .btn {
-    @extend button;
-    text-decoration: none;
+  @extend button;
+  text-decoration: none;
 }
 
 .embed {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.2%;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.2%;
 
-    > * {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-    }
+  > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .hero {
-    padding-top: var(--spacing);
-    padding-bottom: var(--spacing);
-    background-color: $brand-color-1;
+  padding-top: var(--spacing);
+  padding-bottom: var(--spacing);
+  background-color: $brand-color-1;
 
-    @include media-greater($on-laptop) {
-        padding-top: var(--spacing-m);
-        padding-bottom: var(--spacing-m);
-    }
+  @include media-greater($on-laptop) {
+    padding-top: var(--spacing-m);
+    padding-bottom: var(--spacing-m);
+  }
 
-    > :first-child {
-        margin-top: 0;
-    }
+  > :first-child {
+    margin-top: 0;
+  }
 
-    > :last-child {
-        margin-bottom: 0;
-    }
+  > :last-child {
+    margin-bottom: 0;
+  }
 
-    &--naked {
-        @extend .hero;
-        background-color: unset;
-    }
+  &--naked {
+    @extend .hero;
+    background-color: unset;
+  }
 
-    &--dark {
-        @extend .hero;
-        background-color: #000;
-        color: $brand-color-1;
-    }
+  &--dark {
+    @extend .hero;
+    background-color: #000;
+    color: $brand-color-1;
+  }
 
-    &--light {
-        @extend .hero;
-        background-color: $grey-color-light;
-        color: $text-color;
-    }
+  &--light {
+    @extend .hero;
+    background-color: $grey-color-light;
+    color: $text-color;
+  }
 }
 
 .icon {
-    display: inline-block;
-    vertical-align: middle;
+  display: inline-block;
+  vertical-align: middle;
 
-    svg {
-        display: block;
-        width: 1em;
-        height: 1em;
-        color: inherit;
+  svg {
+    display: block;
+    width: 1em;
+    height: 1em;
+    color: inherit;
 
-        > * {
-            fill: currentColor;
-        }
+    > * {
+      fill: currentColor;
     }
+  }
 }

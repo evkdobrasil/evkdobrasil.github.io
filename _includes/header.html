@@ -13,6 +13,9 @@
       </button>
       {% assign site_pages = site.pages | sort: 'position' %}
       <nav class="site-nav" id="site-nav">
+        <a href="{{ site.baseurl }}/" class="page-link">
+          Página inicial
+        </a>
         {%- for p in site_pages -%}
           {%- if p.menu-title -%}
             <a href="{{ p.url | prepend: site.baseurl }}" class="page-link">

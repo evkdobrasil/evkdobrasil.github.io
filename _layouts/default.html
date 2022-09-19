@@ -11,11 +11,11 @@ layout: compress
 
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDP78JF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    {%- include header.html -%}
-
-    {{ content }}
-
-    {%- include footer.html -%}
+    <main class="main-container">
+      {%- include header.html -%}
+      {{ content }}
+      {%- include footer.html -%}
+    </main>
 
     {%- if site.ga_id -%}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.ga_id }}"></script>

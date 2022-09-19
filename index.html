@@ -1,32 +1,73 @@
 ---
 title: EVK do Brasil
 layout: default
-image: 
+image:
+banners:
+- src: img/home-banner/evk-14.jpg
+- src: img/home-banner/evk-19.jpg
+- src: img/home-banner/tubodin-55.jpg
+- src: img/home-banner/tubodin-67.jpg
+- src: img/home-banner/tubodin-84.jpg
+- src: img/home-banner/tubodin-89.jpg
+- src: img/home-banner/tubodin-94.jpg
+- src: img/home-banner/tubodin-121.jpg
+- src: img/home-banner/tubodin-128.jpg
+- src: img/home-banner/tubodin-132.jpg
+- src: img/home-banner/tubodin-143.jpg
+- src: img/home-banner/tubodin-161.jpg
+- src: img/home-banner/tubodin-169.jpg
+- src: img/home-banner/tubodin-175.jpg
 ---
 
-<section class="home-banner">
-    <div class="home-banner__content">
-        <p class="home-banner__heading">
-            <span class="home-banner__heading__line-1">
-                Bem vindo à
-            </span>
-            <span class="home-banner__heading__line-2">
-                {{ site.title }}
-            </span>
+<section class="home-top">
+    <div class="home-top__info">
+        <h2 class="home-top__title">Estamos fabricando o futuro</h2>
+        <p>
+            Garantimos cotas críticas por meio de relatório das medidas aferidas eletronicamente.
         </p>
     </div>
 </section>
 
+<section class="home-banner">
+    {% for banner in page.banners %}
+    <article class="home-banner__item">
+        <img src="{{site.baseurl}}/{{banner.src}}" width="400" />
+    </article>
+    {% endfor %}
+</section>
+
 <section class="home-intro">
-    <div class="home-intro__content">
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo in deleniti mollitia odit est dolor doloremque iste explicabo ipsam cupiditate! Tempore eius modi commodi maiores eos natus ab eligendi distinctio!
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam magnam odit officiis nesciunt, modi distinctio fugiat asperiores, maxime temporibus, obcaecati consequatur quae cupiditate omnis eaque dolores. Sit tempora nesciunt nulla.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, unde debitis. Libero possimus, corrupti consequatur odio placeat officia delectus cumque itaque laboriosam amet explicabo illum, voluptates quis modi. Corrupti, vero.
-        </p>
-    </div>
+    <article class="home-intro__item">
+        <div class="home-intro__image">
+            <img src="{{site.baseurl}}/img/home/fabrica.jpg" alt="fabricação de peças">
+        </div>
+        <div class="home-intro__content">
+            <h2>Somos fábrica</h2>
+            <p>
+                Nossos produtos, tantos nas linhas retas como angulares, possuem tratamento superficial
+                que garante sua durabilidade sem prejudicar o meio ambiente.
+            </p>
+            <p>
+                Se necessário, fabricamos peças sob desenho, conforme a necessidade do cliente.
+                Temos um setor de engenharia de desenvolvimento e qualidade.
+                Fornecemos acessórios para diversos tipos de máquinas.
+            </p>
+        </div>
+    </article>
+    <article class="home-intro__item">
+        <div class="home-intro__image">
+            <img src="{{site.baseurl}}/img/home/abracadeira.jpg" alt="abraçadeira">
+        </div>
+        <div class="home-intro__content">
+            <h2>Nossa linha de atuação</h2>
+            <p>
+                Além de conexões, também fornecemos acessórios, como as abraçadeiras para fixação
+                nos tubos e conexões.
+            </p>
+            <p>
+                Temos os modelos da linha standart e pesada, além das duplas e com trilhos.
+                <a href="{{site.baseurl}}/fale-conosco/">Consulte-nos</a>.
+            </p>
+        </div>
+    </article>
 </section>

@@ -1,21 +1,16 @@
 <footer class="site-footer">
   <div class="site-footer__wrapper">
+    <p>
+      <img class="site-footer__logo" src="{{site.baseurl}}/img/evk-logo.png" alt="{{site.title}}" width="80">
+    </p>
 
-    <ul class="seamless">
-      <li>
-        <a href="{{ site.baseurl }}/">Home</a>
-      </li>
+    <nav class="site-footer__nav">
+      <a class="page-link" href="{{ site.baseurl }}/">Página inicial</a>
 
       {%- assign site_pages = site.pages | sort: 'position' -%}
       {%- for p in site_pages %}{% if p.menu-title -%}
-        <li>
-          <a href="{{ p.url | prepend: site.baseurl }}">{{ p.menu-title }}</a>
-        </li>
+      <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.menu-title }}</a>
       {%- endif %}{% endfor -%}
-    </ul>
-
-    <section class="site-footer__features">
-    </section>
-
+    </nav>
   </div>
 </footer>

@@ -1,0 +1,20 @@
+{
+  "name": "evkdobrasil.github.io",
+  "scripts": {
+    "postinstall": "bundle update && bundle install",
+    "start": "npm run jekyll:s",
+    "jekyll:s": "bundle exec jekyll s w --livereload",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evkdobrasil/evkdobrasil.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evkdobrasil/evkdobrasil.github.io/issues"
+  },
+  "homepage": "https://github.com/evkdobrasil/evkdobrasil.github.io#readme"
+}

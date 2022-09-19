@@ -1,15 +1,48 @@
-.home-banner {
-    @extend .hero;
+.home-top {
+  background: url("#{$baseurl}/img/home/top-cover.jpg") center / cover;
 
-    &__content {
-        @extend .wrapper;
-    }
+  &__info {
+    padding: 30% 50px 50px;
+    font-size: 1.4rem;
+    color: #fff;
+
+    background-image: radial-gradient(
+      rgba($brand-color-4, 0.3),
+      rgba(darken($brand-color-4, 40%), 0.85)
+    );
+  }
+
+  * {
+    margin: 0;
+  }
+
+  &__title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    text-transform: uppercase;
+  }
+}
+
+.home-banner {
+  @extend .page-content, .wrapper;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+
+  &__item {
+    @extend .img-wrapper;
+    display: inline-block;
+    margin-right: var(--spacing-xs);
+  }
 }
 
 .home-intro {
-    @extend .hero--light;
+  @extend .wrapper, .hero--light, .horizontal--smart;
 
-    &__content {
-        @extend .wrapper;
-    }
+  &__item {
+    @extend .flex;
+  }
+
+  &__image {
+    @extend .img-wrapper;
+  }
 }

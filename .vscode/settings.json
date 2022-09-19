@@ -1,3 +1,5 @@
 {
-    "cSpell.language": "en,pt,pt_BR"
+    "cSpell.language": "en,pt,pt_BR",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
 }

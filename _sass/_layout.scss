@@ -3,11 +3,7 @@
 
   &__wrapper {
     @extend .wrapper, .horizontal;
-    align-items: flex-end;
-
-    @include media-query($on-laptop) {
-      align-items: flex-start;
-    }
+    align-items: center;
   }
 }
 
@@ -17,7 +13,7 @@
 
   img {
     display: block;
-    width: 160px;
+    width: 80px;
   }
 }
 
@@ -34,12 +30,17 @@
     color: currentColor;
     padding: 10px;
 
-    &[aria-expanded="true"], &:hover, &:focus, &:active {
+    &[aria-expanded="true"],
+    &:hover,
+    &:focus,
+    &:active {
       color: currentColor;
       box-shadow: 0 0 0 1px currentColor;
     }
 
-    &:hover, &:focus, &:active {
+    &:hover,
+    &:focus,
+    &:active {
       color: #000;
     }
 
@@ -77,13 +78,12 @@
   white-space: nowrap;
   padding-left: 1em;
   padding-right: 1em;
-  font-weight: bold;
-  font-size: 0.85em;
-  color: currentColor;
+  font-size: 0.9em;
+  color: $grey-color;
 
   @include media-query($on-laptop) {
-    margin-top: .5em;
-    margin-bottom: .5em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
   }
 
   &:hover,
@@ -98,25 +98,7 @@
   padding: var(--spacing) 0;
 
   &__wrapper {
-    @extend .wrapper, .horizontal;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__features {
-    &-title {
-      font-size: 1em;
-      text-align: center;
-    }
-
-    &-list {
-      @extend .seamless, .horizontal, .center;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    &-item {
-      margin: var(--spacing-s);
-    }
+    @extend .wrapper, .vertical, .center;
+    text-align: center;
   }
 }
