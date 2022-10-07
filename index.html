@@ -3,37 +3,37 @@ title: EVK do Brasil
 layout: default
 image:
 banners:
-- src: img/home-banner/evk-14.jpg
-- src: img/home-banner/evk-19.jpg
-- src: img/home-banner/tubodin-55.jpg
-- src: img/home-banner/tubodin-67.jpg
-- src: img/home-banner/tubodin-84.jpg
-- src: img/home-banner/tubodin-89.jpg
-- src: img/home-banner/tubodin-94.jpg
-- src: img/home-banner/tubodin-121.jpg
-- src: img/home-banner/tubodin-128.jpg
-- src: img/home-banner/tubodin-132.jpg
-- src: img/home-banner/tubodin-143.jpg
-- src: img/home-banner/tubodin-161.jpg
-- src: img/home-banner/tubodin-169.jpg
-- src: img/home-banner/tubodin-175.jpg
+- src: img/home-slides/evk-14.jpg
+- src: img/home-slides/evk-19.jpg
+- src: img/home-slides/tubodin-55.jpg
+- src: img/home-slides/tubodin-67.jpg
+- src: img/home-slides/tubodin-84.jpg
+- src: img/home-slides/tubodin-89.jpg
+- src: img/home-slides/tubodin-94.jpg
+- src: img/home-slides/tubodin-121.jpg
+- src: img/home-slides/tubodin-128.jpg
+- src: img/home-slides/tubodin-132.jpg
+- src: img/home-slides/tubodin-143.jpg
+- src: img/home-slides/tubodin-161.jpg
+- src: img/home-slides/tubodin-169.jpg
+- src: img/home-slides/tubodin-175.jpg
 ---
 
-<section class="home-top">
-    <div class="home-top__info">
-        <h2 class="home-top__title">Estamos fabricando o futuro</h2>
+<section class="home-slides">
+    {% for banner in page.banners %}
+    <article class="home-slides__item">
+        <img src="{{site.baseurl}}/{{banner.src}}" width="200" />
+    </article>
+    {% endfor %}
+</section>
+
+<section class="home-banner">
+    <div class="home-banner__info">
+        <h2 class="home-banner__title">Estamos fabricando o futuro</h2>
         <p>
             Garantimos cotas críticas por meio de relatório das medidas aferidas eletronicamente.
         </p>
     </div>
-</section>
-
-<section class="home-banner">
-    {% for banner in page.banners %}
-    <article class="home-banner__item">
-        <img src="{{site.baseurl}}/{{banner.src}}" width="400" />
-    </article>
-    {% endfor %}
 </section>
 
 <section class="home-intro">
