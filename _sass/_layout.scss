@@ -1,5 +1,6 @@
 .site-header {
-  @extend .page-content;
+  padding-top: var(--spacing-s);
+  padding-bottom: var(--spacing-s);
 
   &__wrapper {
     @extend .wrapper, .horizontal;
@@ -13,7 +14,7 @@
 
   img {
     display: block;
-    width: 80px;
+    width: 140px;
   }
 }
 
