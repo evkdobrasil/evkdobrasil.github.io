@@ -43,6 +43,12 @@ ol {
 .btn {
   @extend button;
   text-decoration: none;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .embed {

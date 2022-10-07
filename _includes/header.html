@@ -2,7 +2,7 @@
   <div class="site-header__wrapper">
 
     <a href="{{ site.baseurl }}/" class="site-title">
-      <img src="{{ site.baseurl }}/img/evk-logo.png" alt="{{ site.title }}">
+      {%- include svg/evk-logo.svg -%}
     </a>
 
     <div class="site-nav__container">
@@ -17,11 +17,11 @@
           Página inicial
         </a>
         {%- for p in site_pages -%}
-          {%- if p.menu-title -%}
-            <a href="{{ p.url | prepend: site.baseurl }}" class="page-link">
-              {{ p.menu-title }}
-            </a>
-          {%- endif -%}
+        {%- if p.menu-title -%}
+        <a href="{{ p.url | prepend: site.baseurl }}" class="page-link">
+          {{ p.menu-title }}
+        </a>
+        {%- endif -%}
         {%- endfor -%}
       </nav>
     </div>

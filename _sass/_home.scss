@@ -1,6 +1,7 @@
 .home {
   &-banner {
     background: url("#{$baseurl}/img/home/top-cover.jpg") center / cover;
+    text-shadow: -2px 2px 5px #000;
 
     &__info {
       padding: 30% 50px 50px;
@@ -20,6 +21,7 @@
     &__title {
       font-size: clamp(2rem, 5vw, 4rem);
       text-transform: uppercase;
+      color: $brand-color-1;
     }
   }
 
@@ -39,12 +41,37 @@
   &-intro {
     @extend .wrapper, .hero--light, .horizontal--smart;
 
+    p {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
     &__item {
       @extend .flex;
     }
 
     &__image {
       @extend .img-wrapper;
+    }
+
+    &__heading {
+      &::before {
+        content: "";
+        display: inline-block;
+        vertical-align: baseline;
+        margin-right: 0.25em;
+        width: 0.25em;
+        height: 0.85em;
+        background-color: $brand-color-2;
+        background-image: linear-gradient(
+          $brand-color-3 33%,
+          $brand-color-2 33%,
+          $brand-color-2 66%,
+          $brand-color-1 66%
+        );
+        box-shadow: 0 3px 6px rgba(black, 0.1);
+      }
     }
   }
 }

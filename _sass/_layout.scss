@@ -1,10 +1,26 @@
+$header-height: 60px;
+
 .site-header {
-  padding-top: var(--spacing-s);
-  padding-bottom: var(--spacing-s);
+  height: $header-height;
+  line-height: $header-height;
+  background-color: #000;
+  box-shadow: 0 3px 0 $brand-color-3, 0 6px 0 $brand-color-2,
+    0 9px 0 $brand-color-1;
+  margin-bottom: 9px;
+
+  .page-link {
+    color: $brand-color-3;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $brand-color-1;
+      text-decoration: none;
+    }
+  }
 
   &__wrapper {
     @extend .wrapper, .horizontal;
-    align-items: center;
   }
 }
 
@@ -12,9 +28,9 @@
   float: left;
   max-width: 50%;
 
-  img {
-    display: block;
-    width: 140px;
+  svg {
+    margin-top: 10px;
+    width: 180px;
   }
 }
 
@@ -80,6 +96,7 @@
   padding-left: 1em;
   padding-right: 1em;
   font-size: 0.9em;
+  font-weight: bold;
   color: $grey-color;
 
   @include media-query($on-laptop) {
@@ -96,10 +113,15 @@
 
 .site-footer {
   margin-top: auto;
-  padding: var(--spacing) 0;
+  padding-top: var(--spacing-m);
+  padding-bottom: var(--spacing-m);
 
   &__wrapper {
     @extend .wrapper, .vertical, .center;
     text-align: center;
+  }
+
+  &__logo {
+    margin-bottom: var(--spacing-s);
   }
 }
