@@ -10,8 +10,8 @@
   transform: scale(0.9999);
 
   &:focus {
-    border-color: $brand-color-3;
-    box-shadow: 0 2px 10px 0 rgba($brand-color-3, 0.5);
+    border-color: $grey-color;
+    box-shadow: 0 2px 10px 0 rgba($orange, 0.5);
   }
 }
 
@@ -167,5 +167,5 @@ button {
   padding-right: 2em;
   font-weight: bold;
   line-height: 1.5;
-  @include button-colors($brand-color-3);
+  @include button-colors($brand-color);
 }

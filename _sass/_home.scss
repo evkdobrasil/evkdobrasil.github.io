@@ -9,8 +9,8 @@
       color: #fff;
 
       background-image: radial-gradient(
-        rgba($brand-color-4, 0.3),
-        rgba(darken($brand-color-4, 40%), 0.85)
+        rgba($green, 0.3),
+        rgba(darken($green, 40%), 0.85)
       );
     }
 
@@ -21,7 +21,7 @@
     &__title {
       font-size: clamp(2rem, 5vw, 4rem);
       text-transform: uppercase;
-      color: $brand-color-1;
+      color: $yellow;
     }
   }
 
@@ -63,12 +63,12 @@
         margin-right: 0.25em;
         width: 0.25em;
         height: 0.85em;
-        background-color: $brand-color-2;
+        background-color: $beige;
         background-image: linear-gradient(
-          $brand-color-3 33%,
-          $brand-color-2 33%,
-          $brand-color-2 66%,
-          $brand-color-1 66%
+          $orange 33%,
+          $beige 33%,
+          $beige 66%,
+          $yellow 66%
         );
         box-shadow: 0 3px 6px rgba(black, 0.1);
       }

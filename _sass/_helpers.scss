@@ -71,7 +71,7 @@ ol {
 .hero {
   padding-top: var(--spacing-smart);
   padding-bottom: var(--spacing-smart);
-  background-color: $brand-color-1;
+  background-color: $yellow;
 
   > :first-child {
     margin-top: 0;
@@ -88,8 +88,8 @@ ol {
 
   &--dark {
     @extend .hero;
-    background-color: #000;
-    color: $brand-color-1;
+    background-color: $black;
+    color: $yellow;
   }
 
   &--light {
