@@ -3,7 +3,8 @@ $header-height: 60px;
 .site-header {
   height: $header-height;
   line-height: $header-height;
-  background-color: #1b1918;
+  color: #fff;
+  background-color: $black;
   box-shadow: 0 3px 0 $orange, 0 6px 0 $beige, 0 9px 0 $yellow;
   margin-bottom: 9px;
 
@@ -38,36 +39,11 @@ $header-height: 60px;
 
   &__container {
     position: relative;
+    align-self: flex-start; // avoid pushing menu down
   }
 
   &__button {
     @extend .vertical;
-    background-color: transparent;
-    color: currentColor;
-    padding: 10px;
-
-    &[aria-expanded="true"],
-    &:hover,
-    &:focus,
-    &:active {
-      color: currentColor;
-      box-shadow: 0 0 0 1px currentColor;
-    }
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: #000;
-    }
-
-    > * {
-      display: block;
-      width: 30px;
-      height: 4px;
-      margin-top: 2px;
-      margin-bottom: 2px;
-      background-color: currentColor;
-    }
 
     @include media-greater($on-laptop) {
       display: none;
@@ -75,16 +51,52 @@ $header-height: 60px;
   }
 
   @include media-query($on-laptop) {
+    flex-direction: column;
     position: absolute;
     top: 100%;
     right: 0;
-    flex-direction: column;
-    padding: var(--spacing-s);
-    background-color: $background-color;
-    box-shadow: 0 0 0 1px currentColor;
+    padding-top: 9px;
+    min-width: 12em;
 
     &.off {
       display: none;
+    }
+
+    &__button {
+      padding: 10px;
+      margin-top: 7px;
+      background-color: transparent;
+
+      &[aria-expanded="true"],
+      &:hover,
+      &:focus,
+      &:active {
+        color: #fff;
+        background-color: transparent;
+        box-shadow: none;
+      }
+
+      > * {
+        display: block;
+        width: 30px;
+        height: 4px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        background-color: currentColor;
+      }
+    }
+
+    .page-link {
+      padding-left: 2em;
+      padding-right: 2em;
+      border-top: 1px solid $grey-color;
+      background-color: rgba($black, 0.95);
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $black;
+      }
     }
   }
 }
@@ -97,11 +109,6 @@ $header-height: 60px;
   font-size: 0.9em;
   font-weight: bold;
   color: $grey-color;
-
-  @include media-query($on-laptop) {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-  }
 
   &:hover,
   &:focus,
