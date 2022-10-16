@@ -39,7 +39,7 @@
   }
 
   &-intro {
-    @extend .wrapper, .hero--light, .horizontal--smart;
+    @extend .wrapper, .hero, .horizontal--smart;
 
     p {
       &:last-child {

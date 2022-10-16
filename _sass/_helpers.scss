@@ -69,9 +69,8 @@ ol {
 }
 
 .hero {
-  padding-top: var(--spacing-smart);
-  padding-bottom: var(--spacing-smart);
-  background-color: $yellow;
+  padding: var(--spacing-smart);
+  background-color: $grey-color-light;
 
   > :first-child {
     margin-top: 0;
@@ -81,21 +80,19 @@ ol {
     margin-bottom: 0;
   }
 
-  &--naked {
+  &--yellow {
     @extend .hero;
-    background-color: unset;
+    background-color: $yellow;
   }
 
-  &--dark {
+  &--black {
     @extend .hero;
     background-color: $black;
-    color: $yellow;
-  }
+    color: $grey-color-light;
 
-  &--light {
-    @extend .hero;
-    background-color: $grey-color-light;
-    color: $text-color;
+    a {
+      color: $yellow;
+    }
   }
 }
 

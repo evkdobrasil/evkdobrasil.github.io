@@ -1,131 +1,143 @@
 .post-list {
-    margin-top: var(--spacing-smart);
+  margin-top: var(--spacing-smart);
 
-    &_wrapper {
-        @extend .wrapper;
-        width: 100%;
-    }
+  &_wrapper {
+    @extend .wrapper;
+    width: 100%;
+  }
 }
 
 .post-item {
-    margin-top: var(--spacing-smart);
-    margin-bottom: var(--spacing-smart);
-    padding: var(--spacing-s);
+  margin-top: var(--spacing-smart);
+  margin-bottom: var(--spacing-smart);
+  padding: var(--spacing-s);
 
-    border-radius: 6px;
-    background-color: $background-color;
-    box-shadow: 0 3px 6px rgba(#000, 0.2);
+  border-radius: 6px;
+  background-color: $background-color;
+  box-shadow: 0 3px 6px rgba(#000, 0.2);
 
-    > * {
-        margin-top: 0.3em;
-        margin-bottom: 0.3em;
-    }
+  > * {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
 }
 
 .post-link-title {
-    font-size: 1.4em;
+  font-size: 1.4em;
 }
 
 .post-container {
-    padding-bottom: var(--spacing-m);
+  padding-bottom: var(--spacing-m);
+}
+
+.post-header {
+  // afastar a imagem do post do logo
+  padding: var(--spacing) var(--spacing-smart) 0;
+
+  .wrapper {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .post-title {
+  @include media-greater($on-laptop) {
     margin-top: var(--spacing-m);
     margin-bottom: var(--spacing-m);
+  }
 }
 
 .post-toolbar {
-    @extend .horizontal;
+  @extend .horizontal;
 
-    align-items: center;
-    flex-wrap: wrap;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .post-meta {
-    margin: 0;
+  margin: 0;
 }
 
 .post-content {
-    > {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6,
-        p,
-        ul,
-        ol,
-        dl,
-        figure,
-        table {
-            @extend .wrapper;
-        }
-
-        ul,
-        ol {
-            @include media-greater($on-palm) {
-                padding-left: var(--spacing-m);
-            }
-        }
+  > {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    ol,
+    dl,
+    figure,
+    table {
+      @extend .wrapper;
     }
 
-    &--grid {
-        @extend .wrapper;
+    ul,
+    ol {
+      @include media-greater($on-palm) {
+        padding-left: var(--spacing-m);
+      }
+    }
+  }
 
-        margin-bottom: var(--spacing-smart);
-        display: grid;
-        grid-gap: var(--spacing-m);
+  &--grid {
+    @extend .wrapper;
 
-        @include media-greater($on-laptop) {
-            grid-template-columns: auto 260px;
-        }
+    margin-bottom: var(--spacing-smart);
+    display: grid;
+    grid-gap: var(--spacing-m);
+
+    @include media-greater($on-laptop) {
+      grid-template-columns: auto 260px;
+    }
+  }
+
+  &__aside {
+    > :first-child {
+      margin-top: 0;
     }
 
-    &__aside {
-        > :first-child {
-            margin-top: 0;
-        }
+    &-item {
+      margin-bottom: var(--spacing-s);
+      padding: var(--spacing-s);
+      background-color: $grey-color-light;
 
-        &-item {
-            margin-bottom: var(--spacing-s);
-            padding: var(--spacing-s);
-            background-color: $grey-color-light;
+      font-size: 0.85em;
 
-            font-size: 0.85em;
+      display: grid;
+      grid-gap: var(--spacing-s);
+      grid-template-columns: min-content auto;
 
-            display: grid;
-            grid-gap: var(--spacing-s);
-            grid-template-columns: min-content auto;
-
-            .icon {
-                padding-top: 0.1em;
-            }
-        }
-
-        &-title {
-            margin-bottom: 0;
-        }
-
-        &-excerpt {
-            font-size: 0.85em;
-
-            p {
-                margin-top: 0.25em;
-                margin-bottom: 0.25em;
-            }
-        }
+      .icon {
+        padding-top: 0.1em;
+      }
     }
+
+    &-title {
+      margin-bottom: 0;
+    }
+
+    &-excerpt {
+      font-size: 0.85em;
+
+      p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
+    }
+  }
 }
 
 .post-navigation {
-    @extend .wrapper, .horizontal;
-    margin-top: var(--spacing);
-    padding-top: var(--spacing);
-    border-top: 1px solid $grey-color-light;
+  @extend .wrapper, .horizontal;
+  margin-top: var(--spacing);
+  padding-top: var(--spacing);
+  border-top: 1px solid $grey-color-light;
 
-    &__separator {
-        width: var(--spacing);
-    }
+  &__separator {
+    width: var(--spacing);
+  }
 }

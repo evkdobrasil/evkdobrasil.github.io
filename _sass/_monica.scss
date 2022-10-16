@@ -21,11 +21,24 @@
 
     @include media-query($on-palm) {
       flex-direction: column;
+
+      .order-1 {
+        margin-bottom: var(--spacing-s);
+      }
     }
 
     @include media-greater($on-palm) {
       > * + * {
         margin-left: var(--spacing-smart);
+      }
+
+      .order-1 {
+        order: 1;
+        margin-left: var(--spacing-smart);
+
+        + * {
+          margin-left: 0;
+        }
       }
     }
   }
