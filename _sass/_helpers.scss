@@ -69,7 +69,9 @@ ol {
 }
 
 .hero {
-  padding: var(--spacing-smart);
+  @extend .page-content;
+  padding-left: var(--spacing-smart);
+  padding-right: var(--spacing-smart);
   background-color: $grey-color-light;
 
   > :first-child {
@@ -85,14 +87,23 @@ ol {
     background-color: $yellow;
   }
 
-  &--black {
+  &--grey {
     @extend .hero;
-    background-color: $black;
+    background-color: $grey-color;
     color: $grey-color-light;
 
     a {
       color: $yellow;
     }
+
+    button {
+      @include button-colors($yellow, $black);
+    }
+  }
+
+  &--black {
+    @extend .hero--grey;
+    background-color: $black;
   }
 }
 

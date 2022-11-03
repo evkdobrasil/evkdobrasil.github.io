@@ -39,7 +39,7 @@
   }
 
   &-intro {
-    @extend .wrapper, .hero, .horizontal--smart;
+    @extend .wrapper, .page-content, .horizontal--smart;
 
     p {
       &:last-child {
@@ -71,6 +71,10 @@
           $yellow 66%
         );
         box-shadow: 0 3px 6px rgba(black, 0.1);
+      }
+
+      a {
+        color: inherit;
       }
     }
   }
