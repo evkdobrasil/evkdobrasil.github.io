@@ -1,6 +1,8 @@
 .home {
-  &-banner {
-    background: url("#{$baseurl}/img/home/top-cover.jpg") center / cover;
+  &-slide {
+    background-image: var(--img);
+    background-position: center;
+    background-size: cover;
     text-shadow: -2px 2px 5px #000;
 
     &__info {
@@ -25,7 +27,7 @@
     }
   }
 
-  &-slides {
+  &-products {
     @extend .page-content, .wrapper, .hide-scrollbar;
     overflow: hidden;
     overflow-x: auto;
