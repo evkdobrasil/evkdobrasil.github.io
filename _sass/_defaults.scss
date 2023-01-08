@@ -1,6 +1,6 @@
 :root {
-  --link: $blue;
-  --link-active: $grey-color-dark;
+  --link: #{$blue};
+  --link-active: #{$grey-color-dark};
   --link-active-decoration: underline;
 }
 
