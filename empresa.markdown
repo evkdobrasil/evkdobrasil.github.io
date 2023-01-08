@@ -1,5 +1,7 @@
 ---
 title: Sobre a EVK do Brasil
+description: >
+  Nascida em 2006 a Empresa EVK DO BRASIL, 100% nacional, estruturada com a finalidade de proporcionar um ambiente de operações e processos adequados, destaca-se, na fabricação e comercialização de componentes e produtos de sistemas hidráulicos, atuando com um corpo de profissionais capacitados que garantem o alto desempenho de seus produtos e serviços, desde a seleção de seus provedores externos e seus processos, até a utilização final do seu produto no Mercado...
 menu-title: Empresa
 position: 1
 gallery:

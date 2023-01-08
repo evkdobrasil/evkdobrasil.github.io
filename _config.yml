@@ -20,7 +20,11 @@ defaults:
     permalink: blog/:title/
     image: ''
 lang: pt_BR
-description: ''
+description: >
+  Fabricação e comercialização de componentes e produtos de sistemas
+  hidráulicos. Tratamento superficial que garante sua durabilidade sem prejudicar o
+  meio ambiente. Fabricamos peças sob desenho, conforme a necessidade do
+  cliente.
 baseurl: ''
 url: http://evkdobrasil.github.io/
 markdown: kramdown
