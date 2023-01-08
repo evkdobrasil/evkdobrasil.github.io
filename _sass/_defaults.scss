@@ -1,3 +1,9 @@
+:root {
+  --link: $blue;
+  --link-active: $grey-color-dark;
+  --link-active-decoration: underline;
+}
+
 body {
   @extend .vertical;
   margin: 0;
@@ -9,7 +15,6 @@ body {
   line-height: $base-line-height;
   color: $text-color;
   background-color: $background-color;
-  background-image: url("#{$baseurl}/img/brushed_alu.png");
 }
 
 h1,
@@ -67,14 +72,14 @@ h6 {
 
 a {
   @extend %transition;
-  color: $blue;
+  color: var(--link);
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: $grey-color-dark;
-    text-decoration: underline;
+    color: var(--link-active);
+    text-decoration: var(--link-active-decoration);
   }
 }
 

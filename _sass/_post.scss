@@ -26,20 +26,6 @@
   font-size: 1.4em;
 }
 
-.post-container {
-  padding-bottom: var(--spacing-m);
-}
-
-.post-header {
-  // afastar a imagem do post do logo
-  padding: var(--spacing) var(--spacing-smart) 0;
-
-  .wrapper {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
-
 .post-title {
   @include media-greater($on-laptop) {
     margin-top: var(--spacing-m);

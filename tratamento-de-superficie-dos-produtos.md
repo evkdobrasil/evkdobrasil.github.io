@@ -38,17 +38,18 @@ Fonte: [Cromo hexavalente: O que você precisa saber](https://www.donaldson.com/
 
 {% endcapture %}
 
-<aside class="hero--yellow horizontal--smart center">
-  <figure class="order-1" style="flex: 1 1 60%;">
-    <div class="img-wrapper">
-      <img src="{{ site.baseurl }}/img/tratamento-superficial-trivalente.jpg" alt="Peças com tratamento superficial trivalente" />
+<aside class="hero--yellow">
+  <div class="wrapper horizontal--smart center">
+    <figure class="order-1" style="flex: 1 1 60%;">
+      <div class="img-wrapper">
+        <img src="{{ site.baseurl }}/img/tratamento-superficial-trivalente.jpg" alt="Peças com tratamento superficial trivalente" />
+      </div>
+      <figcaption>
+        <small>Peças com tratamento superficial trivalente.</small>
+      </figcaption>
+    </figure>
+    <div style="flex: 1 1 40%">
+      {{ cromo_hexavalente_e_trivalente | markdownify }}
     </div>
-    <figcaption>
-      <small>Peças com tratamento superficial trivalente.</small>
-    </figcaption>
-  </figure>
-
-  <div style="flex: 1 1 40%">
-    {{ cromo_hexavalente_e_trivalente | markdownify }}
   </div>
 </aside>

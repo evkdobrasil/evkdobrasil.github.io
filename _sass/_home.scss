@@ -28,7 +28,9 @@
   }
 
   &-products {
-    @extend .page-content, .wrapper, .hide-scrollbar;
+    @extend .page-content, .hide-scrollbar;
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
     overflow: hidden;
     overflow-x: auto;
     white-space: nowrap;
@@ -36,7 +38,7 @@
     &__item {
       @extend .img-wrapper;
       display: inline-block;
-      margin-right: var(--spacing-xs);
+      margin: 0 var(--spacing-xs);
     }
   }
 
@@ -59,7 +61,7 @@
 
     &__heading {
       &::before {
-        content: "";
+        content: '';
         display: inline-block;
         vertical-align: baseline;
         margin-right: 0.25em;

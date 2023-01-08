@@ -7,17 +7,9 @@ $header-height: 60px;
   background-color: $black;
   box-shadow: 0 3px 0 $orange, 0 6px 0 $beige, 0 9px 0 $yellow;
   margin-bottom: 9px;
-
-  .page-link {
-    color: $orange;
-
-    &:hover,
-    &:focus,
-    &:active {
-      color: $yellow;
-      text-decoration: none;
-    }
-  }
+  --link: #{$orange};
+  --link-active: #{$yellow};
+  --link-active-decoration: none;
 
   &__wrapper {
     @extend .wrapper, .horizontal;
@@ -67,7 +59,7 @@ $header-height: 60px;
       margin-top: 7px;
       background-color: transparent;
 
-      &[aria-expanded="true"],
+      &[aria-expanded='true'],
       &:hover,
       &:focus,
       &:active {
@@ -108,19 +100,16 @@ $header-height: 60px;
   padding-right: 1em;
   font-size: 0.9em;
   font-weight: bold;
-  color: $grey-color;
-
-  &:hover,
-  &:focus,
-  &:active {
-    text-decoration: underline;
-  }
 }
 
 .site-footer {
-  margin-top: auto;
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
+  background-color: $black;
+  border-top: 3px solid $orange;
+  --link: #{$grey-color};
+  --link-active: #{$grey-color-light};
+  --link-active-decoration: none;
 
   &__wrapper {
     @extend .wrapper, .vertical, .center;
