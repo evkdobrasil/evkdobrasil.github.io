@@ -2,7 +2,15 @@
 title: Sobre a EVK do Brasil
 menu-title: Empresa
 position: 1
+gallery:
+  - src: img/empresa/maquinas-01-1024px.jpg
+  - src: img/empresa/maquinas-06-1024px.jpg
+  - src: img/empresa/maquinas-07-1024px.jpg
+  - src: img/empresa/prateleiras-01-1024px.jpg
 ---
+
+<div class="wrapper horizontal--smart">
+  <div class="flex" style="flex-basis: 70%;" markdown="1">
 
 Nascida em 2006 a Empresa EVK DO BRASIL, 100% nacional, estruturada com a finalidade de proporcionar um ambiente de operações e processos adequados, destaca-se, na **fabricação e comercialização de componentes e produtos de sistemas hidráulicos**, atuando com um corpo de profissionais capacitados que garantem o alto desempenho de seus produtos e serviços, desde a seleção de seus provedores externos e seus processos, até a utilização final do seu produto no Mercado, composta por vários funcionários, interagindo diretamente com as partes interessadas da Empresa, visando continuamente a excelência e satisfação de seus Clientes.
 
@@ -22,3 +30,13 @@ A Organização inova sistematicamente seus processos de aquisição dos element
 
 **Colaboradores** - Disponibilizando estrutura adequada em concordâncias coma s leis de: segurança, ambientais legais e trabalhistas, treinamento constante visando a pro-atividade e o dinamismo, bem como a utilização de equipamentos visando a transformação eliminando desperdícios;
 Direção – Liderar, Planejar, Organizar, Agir, gerar lucro, disponibilizar recursos para o bom andamento das atividades: fazer mais e melhor em menos tempo, com sustentabilidade e segurança.
+
+  </div>
+  <div class="flex vertical" style="flex-basis: 40%;">
+    {% for item in page.gallery %}
+    <div class="img-wrapper" style="margin-bottom: var(--spacing-s);">
+      <img src="{{site.baseurl}}/{{item.src}}">
+    </div>
+    {% endfor %}
+  </div>
+</div>

@@ -45,30 +45,6 @@ strip:
   </div>
 </section>
 
-<section class="home-about">
-  <p class="home-about__keywords">
-    <span class="home-keywords__item">Conexões</span>
-    <span class="home-keywords__item">Acessórios</span>
-    <span class="home-keywords__item">Peças sob medida</span>
-  </p>
-  <p class="home-about__excerpt">
-    Nosso desafio é inovar sistematicamente em nossos processos. Vemos as
-    constantes mudanças no cenário econômico como oportunidades. Trabalhamos na
-    redução de desperdícios, otimização de processos e terceirizações, e na
-    melhoria da qualidade do fluxo de todo o sistema.
-  </p>
-</section>
-
-<div class="home-strip">
-  <div class="home-strip__grid">
-    {% for item in page.strip %}
-    <div class="home-strip__item">
-      <img src="{{site.baseurl}}/{{item.src}}" />
-    </div>
-    {% endfor %}
-  </div>
-</div>
-
 <section class="home-intro">
   <div class="home-intro__wrapper">
     <h2>
@@ -171,4 +147,29 @@ strip:
       </p>
     </div>
   </article>
+</section>
+
+<section class="home-about">
+  <p class="home-about__keywords">
+    <span class="home-keywords__item">Conexões</span>
+    <span class="home-keywords__item">Acessórios</span>
+    <span class="home-keywords__item">Peças sob medida</span>
+  </p>
+
+  <div class="home-strip">
+    <div class="home-strip__grid">
+      {% for item in page.strip %}
+      <div class="home-strip__item">
+        <img src="{{site.baseurl}}/{{item.src}}" />
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <p class="home-about__excerpt">
+    Nosso desafio é inovar sistematicamente em nossos processos. Vemos as
+    constantes mudanças no cenário econômico como oportunidades. Trabalhamos na
+    redução de desperdícios, otimização de processos e terceirizações, e na
+    melhoria da qualidade do fluxo de todo o sistema.
+  </p>
 </section>

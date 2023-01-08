@@ -22,6 +22,10 @@
     @include media-query($on-palm) {
       flex-direction: column;
 
+      > * + * {
+        margin-top: var(--spacing-smart);
+      }
+
       .order-1 {
         margin-bottom: var(--spacing-s);
       }

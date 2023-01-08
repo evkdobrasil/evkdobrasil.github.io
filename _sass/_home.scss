@@ -41,60 +41,11 @@
     }
   }
 
-  &-about {
-    @extend .page-content;
-    text-align: center;
-
-    &__keywords {
-      display: flex;
-      justify-content: center;
-      font-size: clamp(1.2em, 2vw, 1.6em);
-      letter-spacing: 0.4em;
-      text-transform: uppercase;
-
-      > * {
-        margin: var(--spacing-smart);
-      }
-
-      @include media-query($on-laptop) {
-        flex-direction: column;
-      }
-    }
-
-    &__excerpt {
-      @extend .wrapper;
-      width: 48em;
-
-      @include media-greater($on-laptop) {
-        font-size: 1.2em;
-        letter-spacing: 0.2em;
-      }
-    }
-  }
-
-  &-strip {
-    @extend .hero;
-    padding: var(--spacing-xs);
-
-    &__grid {
-      @extend .horizontal;
-    }
-
-    &__item {
-      @extend .flex;
-      margin: var(--spacing-xs);
-
-      img {
-        display: block;
-      }
-    }
-  }
-
   &-intro {
-    @extend .hero--yellow;
+    @extend .page-content;
 
     &__wrapper {
-      @extend .wrapper, .horizontal--smart;
+      @extend .wrapper, .horizontal--smart, .center;
     }
 
     &__gallery {
@@ -107,6 +58,62 @@
       &-img {
         @extend .img-wrapper;
       }
+
+      &-container {
+        p {
+          letter-spacing: 0.1em;
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  &-about {
+    @extend .hero;
+    text-align: center;
+
+    &__keywords {
+      display: flex;
+      justify-content: center;
+      font-size: clamp(1.2em, 2vw, 1.6em);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+
+      > * {
+        margin: 0 var(--spacing-smart);
+      }
+
+      @include media-query($on-laptop) {
+        flex-direction: column;
+      }
+    }
+
+    &__excerpt {
+      @extend .wrapper;
+      width: 48em;
+      letter-spacing: 0.2em;
+
+      @include media-greater($on-laptop) {
+        font-size: 1.2em;
+      }
+    }
+  }
+
+  &-strip {
+    padding-left: var(--spacing-smart);
+    padding-right: var(--spacing-smart);
+
+    &__grid {
+      @extend .horizontal;
+    }
+
+    &__item {
+      @extend .flex;
+      margin: 1px;
+
+      img {
+        display: block;
+      }
     }
   }
 
@@ -114,8 +121,10 @@
     @extend .wrapper, .page-content, .horizontal--smart;
 
     p {
-      &:last-child {
-        margin-bottom: 0;
+      @include media-greater($on-palm) {
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
 
