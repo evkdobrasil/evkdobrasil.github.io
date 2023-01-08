@@ -84,10 +84,7 @@ ol {
     @extend .hero;
     background-color: $grey-color;
     color: $grey-color-light;
-
-    a {
-      color: $yellow;
-    }
+    --link: #{$yellow};
 
     button {
       @include button-colors($yellow, $black);

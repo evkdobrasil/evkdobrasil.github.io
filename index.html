@@ -3,20 +3,23 @@ title: EVK do Brasil
 layout: default
 image:
 products:
-  - src: img/products/evk-14.jpg
   - src: img/products/evk-19.jpg
-  - src: img/products/tubodin-55.jpg
   - src: img/products/tubodin-67.jpg
-  - src: img/products/tubodin-84.jpg
-  - src: img/products/tubodin-89.jpg
-  - src: img/products/tubodin-94.jpg
   - src: img/products/tubodin-121.jpg
   - src: img/products/tubodin-128.jpg
   - src: img/products/tubodin-132.jpg
-  - src: img/products/tubodin-143.jpg
-  - src: img/products/tubodin-161.jpg
-  - src: img/products/tubodin-169.jpg
   - src: img/products/tubodin-175.jpg
+gallery:
+  - src: img/products/evk-14.jpg
+  - src: img/products/tubodin-7.jpg
+  - src: img/products/tubodin-55.jpg
+  - src: img/products/tubodin-169.jpg
+strip:
+  - src: img/empresa/maquinas-07-1024px.jpg
+  - src: img/empresa/manuseio-02-1024px.jpg
+  - src: img/empresa/prateleiras-02-1024px.jpg
+  - src: img/empresa/manuseio-03-1024px.jpg
+  - src: img/empresa/maquinas-06-1024px.jpg
 ---
 
 <section class="home-products">
@@ -32,17 +35,65 @@ products:
   style="--img: url('{{site.baseurl}}/img/home/top-cover.jpg')"
 >
   <div class="home-slide__info">
-    <h2 class="home-slide__title">Estamos fabricando o futuro</h2>
-    <p>
-      Garantimos cotas críticas por meio de relatório das medidas aferidas
-      eletronicamente.
-    </p>
+    <div class="wrapper home-slide__info-inner">
+      <h2 class="home-slide__title">Estamos fabricando o futuro</h2>
+      <p>
+        Garantimos cotas críticas por meio de relatório das medidas aferidas
+        eletronicamente.
+      </p>
+    </div>
   </div>
 </section>
 
+<section class="home-about">
+  <p class="home-about__keywords">
+    <span class="home-keywords__item">Conexões</span>
+    <span class="home-keywords__item">Acessórios</span>
+    <span class="home-keywords__item">Peças sob medida</span>
+  </p>
+  <p class="home-about__excerpt">
+    Nosso desafio é inovar sistematicamente em nossos processos. Vemos as
+    constantes mudanças no cenário econômico como oportunidades. Trabalhamos na
+    redução de desperdícios, otimização de processos e terceirizações, e na
+    melhoria da qualidade do fluxo de todo o sistema.
+  </p>
+</section>
+
+<div class="home-strip">
+  <div class="home-strip__grid">
+    {% for item in page.strip %}
+    <div class="home-strip__item">
+      <img src="{{site.baseurl}}/{{item.src}}" />
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
 <section class="home-intro">
-  <article class="home-intro__item">
-    <div class="home-intro__image">
+  <div class="home-intro__wrapper">
+    <h2>
+      Fabricação e comercialização de componentes e produtos de sistemas
+      hidráulicos
+    </h2>
+    <div class="home-intro__gallery-container">
+      <div class="home-intro__gallery">
+        {% for item in page.gallery %}
+        <div class="home-intro__gallery-img">
+          <img src="{{site.baseurl}}/{{item.src}}" />
+        </div>
+        {% endfor %}
+      </div>
+      <p>
+        Profissionais capacitados, alto desempenho, seleção dos melhores
+        provedores e processos.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="home-features">
+  <article class="home-features__item">
+    <div class="home-features__image">
       <a href="{{ site.baseurl }}/empresa">
         <img
           src="{{site.baseurl}}/img/home/fabrica.jpg"
@@ -50,8 +101,8 @@ products:
         />
       </a>
     </div>
-    <div class="home-intro__content">
-      <h2 class="home-intro__heading">
+    <div class="home-features__content">
+      <h2 class="home-features__heading">
         <a href="{{ site.baseurl }}/empresa">Somos fábrica</a>
       </h2>
       <p>
@@ -69,14 +120,14 @@ products:
       </p>
     </div>
   </article>
-  <article class="home-intro__item">
-    <div class="home-intro__image">
+  <article class="home-features__item">
+    <div class="home-features__image">
       <a href="{{site.baseurl}}/fale-conosco/">
         <img src="{{site.baseurl}}/img/home/linha.jpg" alt="abraçadeira" />
       </a>
     </div>
-    <div class="home-intro__content">
-      <h2 class="home-intro__heading">
+    <div class="home-features__content">
+      <h2 class="home-features__heading">
         <a href="{{site.baseurl}}/fale-conosco/">Nossa linha de atuação</a>
       </h2>
       <p>
@@ -92,8 +143,8 @@ products:
       </p>
     </div>
   </article>
-  <article class="home-intro__item">
-    <div class="home-intro__image">
+  <article class="home-features__item">
+    <div class="home-features__image">
       <a href="{{ site.baseurl }}/tratamento-de-superficie-dos-produtos">
         <img
           src="{{site.baseurl}}/img/home/tratamento-superficial.jpg"
@@ -101,11 +152,11 @@ products:
         />
       </a>
     </div>
-    <div class="home-intro__content">
-      <h2 class="home-intro__heading">
-        <a href="{{site.baseurl}}/tratamento-de-superficie-dos-produtos"
-          >Tratamento superficial</a
-        >
+    <div class="home-features__content">
+      <h2 class="home-features__heading">
+        <a href="{{site.baseurl}}/tratamento-de-superficie-dos-produtos">
+          Tratamento superficial
+        </a>
       </h2>
       <p>
         Uma das últimas etapas do processo, o tratamento superficial é indicado
@@ -114,9 +165,9 @@ products:
         distribuição de camadas e uma deposição significativamente mais rápida.
       </p>
       <p>
-        <a href="{{ site.baseurl }}/tratamento-de-superficie-dos-produtos"
-          >Leia mais</a
-        >
+        <a href="{{ site.baseurl }}/tratamento-de-superficie-dos-produtos">
+          Leia mais
+        </a>
       </p>
     </div>
   </article>

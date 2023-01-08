@@ -66,9 +66,10 @@ html {
 
   --spacing-smart: var(--spacing);
 
+  --border-radius: 16px;
+
   @media (max-width: $on-laptop) {
     --spacing-smart: var(--spacing-s);
+    --border-radius: 8px;
   }
-
-  --border-radius: 16px;
 }

@@ -1,4 +1,16 @@
 .home {
+  &-products {
+    @extend .page-content, .wrapper, .horizontal;
+
+    > * + * {
+      margin-left: var(--spacing-xs);
+    }
+
+    &__item {
+      @extend .img-wrapper;
+    }
+  }
+
   &-slide {
     background-image: var(--img);
     background-position: center;
@@ -6,18 +18,20 @@
     text-shadow: -2px 2px 5px #000;
 
     &__info {
-      padding: 30% 50px 50px;
+      padding: 30% 0 50px;
       font-size: 1.4rem;
       color: #fff;
 
-      background-image: radial-gradient(
+      background-image: linear-gradient(
         rgba($green, 0.3),
         rgba(darken($green, 40%), 0.85)
       );
-    }
 
-    * {
-      margin: 0;
+      &-inner {
+        > * {
+          margin: 0;
+        }
+      }
     }
 
     &__title {
@@ -27,22 +41,76 @@
     }
   }
 
-  &-products {
-    @extend .page-content, .hide-scrollbar;
-    padding-left: var(--spacing-s);
-    padding-right: var(--spacing-s);
-    overflow: hidden;
-    overflow-x: auto;
-    white-space: nowrap;
+  &-about {
+    @extend .page-content;
+    text-align: center;
+
+    &__keywords {
+      display: flex;
+      justify-content: center;
+      font-size: clamp(1.2em, 2vw, 1.6em);
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+
+      > * {
+        margin: var(--spacing-smart);
+      }
+
+      @include media-query($on-laptop) {
+        flex-direction: column;
+      }
+    }
+
+    &__excerpt {
+      @extend .wrapper;
+      width: 48em;
+
+      @include media-greater($on-laptop) {
+        font-size: 1.2em;
+        letter-spacing: 0.2em;
+      }
+    }
+  }
+
+  &-strip {
+    @extend .hero;
+    padding: var(--spacing-xs);
+
+    &__grid {
+      @extend .horizontal;
+    }
 
     &__item {
-      @extend .img-wrapper;
-      display: inline-block;
-      margin: 0 var(--spacing-xs);
+      @extend .flex;
+      margin: var(--spacing-xs);
+
+      img {
+        display: block;
+      }
     }
   }
 
   &-intro {
+    @extend .hero--yellow;
+
+    &__wrapper {
+      @extend .wrapper, .horizontal--smart;
+    }
+
+    &__gallery {
+      @extend .horizontal;
+
+      > * + * {
+        margin-left: var(--spacing-xs);
+      }
+
+      &-img {
+        @extend .img-wrapper;
+      }
+    }
+  }
+
+  &-features {
     @extend .wrapper, .page-content, .horizontal--smart;
 
     p {
