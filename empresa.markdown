@@ -4,9 +4,7 @@ menu-title: Empresa
 position: 1
 ---
 
-Nascida em 2006 a Empresa EVK DO BRASIL é 100% nacional, estruturada com a finalidade de se destacar na **fabricação e comercialização de componentes e produtos de sistemas hidráulicos** pelo alto desempenho de seus produtos e serviços. Buscamos a melhor seleção de provedores externos e seus processos, e a utilização final do seu produto no Mercado
-
-A EVK do Brasil é composta por vários funcionários, interagindo diretamente com as partes interessadas da Empresa, visando continuamente a excelência e satisfação de seus Clientes.
+Nascida em 2006 a Empresa EVK DO BRASIL, 100% nacional, estruturada com a finalidade de proporcionar um ambiente de operações e processos adequados, destaca-se, na **fabricação e comercialização de componentes e produtos de sistemas hidráulicos**, atuando com um corpo de profissionais capacitados que garantem o alto desempenho de seus produtos e serviços, desde a seleção de seus provedores externos e seus processos, até a utilização final do seu produto no Mercado, composta por vários funcionários, interagindo diretamente com as partes interessadas da Empresa, visando continuamente a excelência e satisfação de seus Clientes.
 
 ## Status desejado
 
@@ -22,5 +20,5 @@ A Organização inova sistematicamente seus processos de aquisição dos element
 
 **Clientes** – Interação constante visando atender as necessidades, tais quais: quantidades, produtos, preços, prazo de entrega, cond. de pagamento dentro da conformidade solicitada, de maneira harmônica, transparente e equilibrada, administrando conflitos que porventura venham a ocorrer.
 
-**Colaboradores**  - Disponibilizando estrutura adequada em concordâncias coma s leis de: segurança, ambientais legais e trabalhistas, treinamento constante visando a pro-atividade e o dinamismo, bem como a utilização de equipamentos visando a transformação eliminando desperdícios;
+**Colaboradores** - Disponibilizando estrutura adequada em concordâncias coma s leis de: segurança, ambientais legais e trabalhistas, treinamento constante visando a pro-atividade e o dinamismo, bem como a utilização de equipamentos visando a transformação eliminando desperdícios;
 Direção – Liderar, Planejar, Organizar, Agir, gerar lucro, disponibilizar recursos para o bom andamento das atividades: fazer mais e melhor em menos tempo, com sustentabilidade e segurança.
