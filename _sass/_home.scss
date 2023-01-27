@@ -12,25 +12,27 @@
   }
 
   &-slide {
-    background-image: var(--img);
-    background-position: center;
-    background-size: cover;
-    text-shadow: -2px 2px 5px #000;
+    @include media-greater($on-palm) {
+      background-image: var(--img);
+      background-position: center;
+      background-size: cover;
+    }
+
+    &__wrapper {
+      @extend .wrapper;
+    }
 
     &__info {
-      padding: 30% 0 50px;
-      font-size: 1.4rem;
+      max-width: 600px;
+      padding: var(--spacing-smart);
       color: #fff;
+      background-color: $black;
+      @include media-greater($on-palm) {
+        background-color: rgba($black, 0.7);
+      }
 
-      background-image: linear-gradient(
-        rgba($green, 0.3),
-        rgba(darken($green, 40%), 0.85)
-      );
-
-      &-inner {
-        > * {
-          margin: 0;
-        }
+      @include media-greater($on-palm) {
+        font-size: 1.4rem;
       }
     }
 
