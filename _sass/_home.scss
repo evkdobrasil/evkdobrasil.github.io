@@ -23,16 +23,14 @@
     }
 
     &__info {
-      max-width: 600px;
+      max-width: 500px;
       padding: var(--spacing-smart);
       color: #fff;
       background-color: $black;
-      @include media-greater($on-palm) {
-        background-color: rgba($black, 0.7);
-      }
 
       @include media-greater($on-palm) {
         font-size: 1.4rem;
+        background-color: rgba($black, 0.7);
       }
     }
 
@@ -51,10 +49,12 @@
     }
 
     &__gallery {
-      @extend .horizontal;
+      display: grid;
+      grid-gap: var(--spacing-xs);
+      grid-template-columns: repeat(2, 1fr);
 
-      > * + * {
-        margin-left: var(--spacing-xs);
+      @include media-greater($on-laptop) {
+        grid-template-columns: repeat(4, 1fr);
       }
 
       &-img {
@@ -66,6 +66,51 @@
           letter-spacing: 0.1em;
           margin-bottom: 0;
         }
+      }
+    }
+  }
+
+  &-features {
+    @extend .wrapper, .horizontal--smart;
+    padding-top: var(--spacing-l);
+    padding-bottom: var(--spacing-l);
+
+    p {
+      @include media-greater($on-palm) {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__item {
+      @extend .flex;
+    }
+
+    &__image {
+      @extend .img-wrapper;
+    }
+
+    &__heading {
+      &::before {
+        content: '';
+        display: inline-block;
+        vertical-align: baseline;
+        margin-right: 0.25em;
+        width: 0.25em;
+        height: 0.85em;
+        background-color: $beige;
+        background-image: linear-gradient(
+          $orange 33%,
+          $beige 33%,
+          $beige 66%,
+          $yellow 66%
+        );
+        box-shadow: 0 3px 6px rgba(black, 0.1);
+      }
+
+      a {
+        color: inherit;
       }
     }
   }
@@ -115,49 +160,6 @@
 
       img {
         display: block;
-      }
-    }
-  }
-
-  &-features {
-    @extend .wrapper, .page-content, .horizontal--smart;
-
-    p {
-      @include media-greater($on-palm) {
-        &:last-child {
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    &__item {
-      @extend .flex;
-    }
-
-    &__image {
-      @extend .img-wrapper;
-    }
-
-    &__heading {
-      &::before {
-        content: '';
-        display: inline-block;
-        vertical-align: baseline;
-        margin-right: 0.25em;
-        width: 0.25em;
-        height: 0.85em;
-        background-color: $beige;
-        background-image: linear-gradient(
-          $orange 33%,
-          $beige 33%,
-          $beige 66%,
-          $yellow 66%
-        );
-        box-shadow: 0 3px 6px rgba(black, 0.1);
-      }
-
-      a {
-        color: inherit;
       }
     }
   }
