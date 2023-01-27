@@ -5,9 +5,9 @@ export const initMobileMenu = () => {
   const siteNavButton = $.first('.site-nav__button');
   const siteNavContainer = $.first('.site-nav__container');
 
-  siteNavButton?.setAttribute('aria-haspopup', 'true');
-  siteNavButton?.setAttribute('aria-expanded', 'false');
-  siteNavButton?.setAttribute('aria-controls', siteNav?.id);
+  siteNavButton.setAttribute('aria-haspopup', 'true');
+  siteNavButton.setAttribute('aria-expanded', 'false');
+  siteNavButton.setAttribute('aria-controls', siteNav?.id);
 
   siteNav.classList.add('off');
 
