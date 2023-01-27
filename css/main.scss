@@ -5,8 +5,9 @@
 
 $baseurl: '{{ site.baseurl }}';
 
-@import "vars", "mixins";
-@import "defaults", "forms";
-@import "monica", "helpers";
-@import "layout";
-@import "home", "post", "share";
+@import 'vars', 'mixins';
+@import 'defaults', 'forms';
+@import 'monica', 'helpers';
+@import 'layout';
+@import 'home', 'post', 'share';
+@import 'slideshow';
