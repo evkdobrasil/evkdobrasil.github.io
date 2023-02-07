@@ -36,7 +36,7 @@ O cromo hexavalente é um material regulamentado, tóxico, que deve ser tratado 
 Uma vez no corpo humano, o cromo hexavalente atua nocivamente em alguns órgãos: perfuração do Septo, pulmões, olhos, pele, fígado e rins.
 
 {: style="font-size:small; margin: 0;"}
-Fonte: [Cromo hexavalente: O que você precisa saber](https://www.donaldson.com/pt-br/industrial-dust-fume-mist/technical-articles/hexavalent-chromium/).
+Fonte: **Cromo hexavalente: O que você precisa saber** (www.donaldson.com, janeiro de 2023).
 
 {% endcapture %}
 
