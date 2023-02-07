@@ -1,6 +1,5 @@
 <header class="site-header">
   <div class="site-header__wrapper">
-
     <a href="{{ site.baseurl }}/" class="site-title">
       {%- include svg/evk-logo.svg -%}
     </a>
@@ -13,18 +12,16 @@
       </button>
       {% assign site_pages = site.pages | sort: 'position' %}
       <nav class="site-nav" id="site-nav">
-        <a href="{{ site.baseurl }}/" class="page-link">
-          Página inicial
-        </a>
-        {%- for p in site_pages -%}
-        {%- if p.menu-title -%}
+        <a href="{{ site.baseurl }}/" class="page-link">Página inicial</a>
+        {%- for p in site_pages -%} {%- if p.menu-title -%}
         <a href="{{ p.url | prepend: site.baseurl }}" class="page-link">
           {{ p.menu-title }}
         </a>
-        {%- endif -%}
-        {%- endfor -%}
+        {%- endif -%} {%- endfor -%}
+        <a href="mailto:comercial@brasil.com.br" class="page-link">
+          Fale conosco
+        </a>
       </nav>
     </div>
-
   </div>
 </header>
