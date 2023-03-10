@@ -6,49 +6,50 @@ collections:
     title: Posts
     output: true
 defaults:
-- scope:
-    path: ''
-    type: pages
-  values:
-    layout: page
-    image: ''
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-    permalink: blog/:title/
-    image: ''
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+      image: ""
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      permalink: blog/:title/
+      image: ""
 lang: pt_BR
 description: >
   Fabricação e comercialização de componentes e produtos de sistemas
   hidráulicos. Tratamento superficial que garante sua durabilidade sem prejudicar o
   meio ambiente. Fabricamos peças sob desenho, conforme a necessidade do
   cliente.
-baseurl: ''
+baseurl: ""
 url: http://evkdobrasil.github.io/
 markdown: kramdown
 permalink: pretty/
 paginate: 10
 paginate_path: "/blog/:num/"
-ga_id: ''
+email: comercial@evkdobrasil.com.br
+ga_id: ""
 sass:
   style: compressed
 plugins:
-- jekyll-paginate
-- jekyll-sitemap
+  - jekyll-paginate
+  - jekyll-sitemap
 exclude:
-- ".sass-cache/"
-- ".jekyll-cache/"
-- ".vscode/"
-- gemfiles/
-- Gemfile
-- Gemfile.lock
-- node_modules/
-- vendor/bundle/
-- vendor/cache/
-- vendor/gems/
-- vendor/ruby/
-- README.md
-- package.json
-- CNAME
+  - ".sass-cache/"
+  - ".jekyll-cache/"
+  - ".vscode/"
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - package.json
+  - CNAME
