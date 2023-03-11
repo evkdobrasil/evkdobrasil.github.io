@@ -3,6 +3,6 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "files.associations": {
-      "*.html": "jekyll"
+      "*.html": "liquid"
     }
 }

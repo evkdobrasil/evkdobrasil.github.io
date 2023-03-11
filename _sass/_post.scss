@@ -26,10 +26,14 @@
   font-size: 1.4em;
 }
 
+.post-header {
+  @extend .page-content, .wrapper;
+  padding-bottom: 0;
+}
+
 .post-title {
   @include media-greater($on-laptop) {
     margin-top: var(--spacing-m);
-    margin-bottom: var(--spacing-m);
   }
 }
 

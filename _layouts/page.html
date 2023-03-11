@@ -4,13 +4,16 @@ layout: default
 
 <article class="post-container">
   <header class="post-header">
-    {%- if page.image != '' -%}
-      <img src="{{ page.image }}" alt="{{ page.title }}" width="100%">
-    {%- endif -%}
+    {% if page.image != '' %}
+      <div class="img-wrapper">
+        <img
+          src="{{ page.image }}"
+          alt="{{ page.title }}"
+          width="100%">
+      </div>
+    {% endif %}
 
-    <div class="wrapper">
-      <h1 class="post-title">{{ page.title }}</h1>
-    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
   </header>
 
   <div class="post-content">
