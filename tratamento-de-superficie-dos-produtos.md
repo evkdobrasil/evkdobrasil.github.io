@@ -1,7 +1,7 @@
 ---
 title: Tratamento de superfície dos nossos produtos
 description: >
-  Uma das últimas etapas do processo, o tratamento superficial é indicado no desenho da peça, em sua maioria seguindo as Normas NBR 10476 e NBR 8094. Esse processo sobressai em relação aos outros, pela sua excelente distribuição de camadas e uma deposição significativamente mais rápida.
+  Esse processo sobressai em relação aos outros, pela sua excelente distribuição de camadas e uma deposição significativamente mais rápida.
 image: /img/tratamento-superficial.jpg
 ---
 
