@@ -1,16 +1,24 @@
 <footer class="site-footer">
   <div class="site-footer__wrapper">
-    <div class="site-footer__logo">
-      {%- include svg/evk-logo.svg -%}
-    </div>
-
     <nav class="site-footer__nav">
       <a class="page-link" href="{{ site.baseurl }}/">Página inicial</a>
 
       {%- assign site_pages = site.pages | sort: 'position' -%}
-      {%- for p in site_pages %}{% if p.menu-title -%}
-      <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.menu-title }}</a>
-      {%- endif %}{% endfor -%}
+      <ul class="seamless">
+        {%- for p in site_pages %}
+          {% if p.menu-title -%}
+            <li>
+              <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.menu-title }}</a>
+            </li>
+          {%- endif %}
+        {% endfor -%}
+      </ul>
     </nav>
+
+    <div class="site-footer__logo">
+      {%- include svg/evk-logo.svg -%}
+
+      <img src="{{ site.baseurl }}/img/selo-investidor-social-horizontal.png" alt="Investidor Social Instituição Amélia Rodrigues">
+    </div>
   </div>
 </footer>

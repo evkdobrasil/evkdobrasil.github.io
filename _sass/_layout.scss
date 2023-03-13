@@ -68,7 +68,7 @@ $header-height: 60px;
         box-shadow: none;
       }
 
-      > * {
+      >* {
         display: block;
         width: 30px;
         height: 4px;
@@ -105,18 +105,20 @@ $header-height: 60px;
 .site-footer {
   padding-top: var(--spacing-m);
   padding-bottom: var(--spacing-m);
-  background-color: $black;
+  background-color: $grey-color-light;
   border-top: 3px solid $orange;
   --link: #{$grey-color};
-  --link-active: #{$grey-color-light};
   --link-active-decoration: none;
 
   &__wrapper {
-    @extend .wrapper, .vertical, .center;
-    text-align: center;
+    @extend .wrapper, .horizontal--smart, .center;
   }
 
   &__logo {
-    margin-bottom: var(--spacing-s);
+    @extend .horizontal, .center;
+
+    >* {
+      margin: var(--spacing-s);
+    }
   }
 }
