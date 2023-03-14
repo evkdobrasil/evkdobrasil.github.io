@@ -3,7 +3,6 @@ title: EVK do Brasil
 timezone: America/Sao_Paulo
 collections:
   posts:
-    title: Posts
     output: true
 defaults:
   - scope:
