@@ -38,9 +38,9 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 exclude:
-  - ".sass-cache/"
-  - ".jekyll-cache/"
-  - ".vscode/"
+  - .sass-cache/
+  - .jekyll-cache/
+  - .vscode/
   - gemfiles/
   - Gemfile
   - Gemfile.lock
@@ -51,4 +51,7 @@ exclude:
   - vendor/ruby/
   - README.md
   - package.json
+  - package-lock.json
+  - tsconfig.json
+  - webpack.config.js
   - CNAME
