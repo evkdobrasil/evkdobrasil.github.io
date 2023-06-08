@@ -7,7 +7,7 @@ $baseurl: '{{ site.baseurl }}';
 
 @import 'vars', 'mixins';
 @import 'defaults', 'forms';
-@import 'monica', 'helpers';
+@import 'monica', 'grid', 'helpers';
 @import 'layout';
 @import 'home', 'post', 'share';
 @import 'slideshow';

@@ -45,13 +45,18 @@
     @extend .page-content;
 
     &__wrapper {
-      @extend .wrapper, .horizontal--smart, .center;
+      @extend .wrapper, .horizontal;
+      gap: var(--spacing-smart);
     }
 
     &__gallery {
       display: grid;
       grid-gap: var(--spacing-xs);
       grid-template-columns: repeat(2, 1fr);
+
+      &-title {
+        margin-top: 0;
+      }
 
       @include media-greater($on-laptop) {
         grid-template-columns: repeat(4, 1fr);
@@ -67,6 +72,10 @@
           margin-bottom: 0;
         }
       }
+    }
+
+    &__banner {
+      flex: 0 0 200px;
     }
   }
 

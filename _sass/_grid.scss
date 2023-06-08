@@ -1,0 +1,13 @@
+.grid {
+  display: grid;
+  gap: var(--spacing-smart);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--width {
+  @extend .grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(var(--item-width, 300px), 1fr)
+  );
+}

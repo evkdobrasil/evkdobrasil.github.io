@@ -24,13 +24,16 @@ strip:
 
 <section class="home-products">
   {% for img in page.products %}
-    <article class="home-products__item">
-      <img src="{{site.baseurl}}/{{img.src}}" width="200" />
-    </article>
+  <article class="home-products__item">
+    <img src="{{site.baseurl}}/{{img.src}}" width="200" />
+  </article>
   {% endfor %}
 </section>
 
-<section class="home-slide" style="--img: url('{{site.baseurl}}/img/empresa/manuseio-03-2000px.jpg')">
+<section
+  class="home-slide"
+  style="--img: url('{{site.baseurl}}/img/empresa/manuseio-03-2000px.jpg')"
+>
   <div class="home-slide__wrapper">
     <div class="home-slide__info">
       <div class="slideshow" data-autoplay>
@@ -59,16 +62,16 @@ strip:
 <section class="home-intro">
   <div class="home-intro__wrapper">
     <div>
-      <h2>
+      <h2 class="home-intro__gallery-title">
         Fabricação e comercialização de componentes e produtos de sistemas
         hidráulicos
       </h2>
       <div class="home-intro__gallery-container">
         <div class="home-intro__gallery">
           {% for item in page.gallery %}
-            <div class="home-intro__gallery-img">
-              <img src="{{site.baseurl}}/{{item.src}}" />
-            </div>
+          <div class="home-intro__gallery-img">
+            <img src="{{site.baseurl}}/{{item.src}}" />
+          </div>
           {% endfor %}
         </div>
         <p>
@@ -77,9 +80,14 @@ strip:
         </p>
       </div>
     </div>
-    <div>
-      <a href="{{site.baseurl}}/investidor-social-instituicao-amelia-rodrigues/">
-        <img src="/img/selo-investidor/selo.png" alt="Investidor Social da Instituição Amélia Rodrigues" />
+    <div class="home-intro__banner">
+      <a
+        href="{{site.baseurl}}/investidor-social-instituicao-amelia-rodrigues/"
+      >
+        <img
+          src="/img/investidor-social/selo.png"
+          alt="Investidor Social da Instituição Amélia Rodrigues"
+        />
       </a>
     </div>
   </div>
@@ -89,7 +97,10 @@ strip:
   <article class="home-features__item">
     <div class="home-features__image">
       <a href="{{ site.baseurl }}/empresa">
-        <img src="{{site.baseurl}}/img/home/fabrica.jpg" alt="fabricação de peças" />
+        <img
+          src="{{site.baseurl}}/img/home/fabrica.jpg"
+          alt="fabricação de peças"
+        />
       </a>
     </div>
     <div class="home-features__content">
@@ -99,12 +110,12 @@ strip:
       <p>
         Nossos produtos, tanto nas linhas retas como angulares, possuem
         tratamento superficial que garante sua durabilidade sem prejudicar o
-                meio ambiente.
+        meio ambiente.
       </p>
       <p>
         Se necessário, fabricamos peças sob desenho, conforme a necessidade do
         cliente. Temos um setor de engenharia de desenvolvimento e qualidade.
-                Fornecemos acessórios para diversos tipos de máquinas.
+        Fornecemos acessórios para diversos tipos de máquinas.
       </p>
       <p>
         <a href="{{ site.baseurl }}/empresa">Saiba mais</a>
@@ -116,9 +127,7 @@ strip:
       <img src="{{site.baseurl}}/img/home/linha.jpg" alt="abraçadeira" />
     </div>
     <div class="home-features__content">
-      <h2 class="home-features__heading">
-        Nossa linha de atuação
-      </h2>
+      <h2 class="home-features__heading">Nossa linha de atuação</h2>
       <p>
         Além de conexões, também fornecemos acessórios, como braçadeiras para
         fixação nos tubos e conexões.
@@ -135,7 +144,10 @@ strip:
   <article class="home-features__item">
     <div class="home-features__image">
       <a href="{{ site.baseurl }}/tratamento-de-superficie-dos-produtos">
-        <img src="{{site.baseurl}}/img/home/tratamento-superficial.jpg" alt="tratamento de superfície das peças" />
+        <img
+          src="{{site.baseurl}}/img/home/tratamento-superficial.jpg"
+          alt="tratamento de superfície das peças"
+        />
       </a>
     </div>
     <div class="home-features__content">
@@ -147,8 +159,8 @@ strip:
       <p>
         Uma das últimas etapas do processo, o tratamento superficial é indicado
         no desenho da peça, em sua maioria seguindo as Normas NBR 10476 e NBR
-                8094. Esse processo sobressai em relação aos outros, pela sua excelente
-                distribuição de camadas e uma deposição significativamente mais rápida.
+        8094. Esse processo sobressai em relação aos outros, pela sua excelente
+        distribuição de camadas e uma deposição significativamente mais rápida.
       </p>
       <p>
         <a href="{{ site.baseurl }}/tratamento-de-superficie-dos-produtos">
@@ -169,9 +181,9 @@ strip:
   <div class="home-strip">
     <div class="home-strip__grid">
       {% for item in page.strip %}
-        <div class="home-strip__item">
-          <img src="{{site.baseurl}}/{{item.src}}" />
-        </div>
+      <div class="home-strip__item">
+        <img src="{{site.baseurl}}/{{item.src}}" />
+      </div>
       {% endfor %}
     </div>
   </div>
@@ -179,6 +191,7 @@ strip:
   <p class="home-about__excerpt">
     Nosso desafio é inovar sistematicamente em nossos processos. Vemos as
     constantes mudanças no cenário econômico como oportunidades. Trabalhamos na
-        redução de desperdícios, otimização de processos e terceirizações, e na
-        melhoria da qualidade do fluxo de todo o sistema.</p>
+    redução de desperdícios, otimização de processos e terceirizações, e na
+    melhoria da qualidade do fluxo de todo o sistema.
+  </p>
 </section>

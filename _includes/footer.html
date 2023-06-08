@@ -5,21 +5,26 @@
 
       {%- assign site_pages = site.pages | sort: 'position' -%}
       <ul class="seamless">
-        {%- for p in site_pages %}
-          {% if p.menu-title -%}
-            <li>
-              <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">{{ p.menu-title }}</a>
-            </li>
-          {%- endif %}
-        {% endfor -%}
-        <li><a href="mailto:{{site.email}}" class="page-link">Fale conosco</a></li>
+        {%- for p in site_pages %} {% if p.menu-title -%}
+        <li>
+          <a class="page-link" href="{{ p.url | prepend: site.baseurl }}">
+            {{ p.menu-title }}
+          </a>
+        </li>
+        {%- endif %} {% endfor -%}
+        <li>
+          <a href="mailto:{{site.email}}" class="page-link">Fale conosco</a>
+        </li>
       </ul>
     </nav>
 
     <div class="site-footer__logo">
       {%- include svg/evk-logo.svg -%}
 
-      <img src="{{ site.baseurl }}/img/selo-investidor/horizontal.png" alt="Investidor Social Instituição Amélia Rodrigues">
+      <img
+        src="{{ site.baseurl }}/img/investidor-social/horizontal.png"
+        alt="Investidor Social Instituição Amélia Rodrigues"
+      />
     </div>
   </div>
 </footer>
