@@ -68,7 +68,7 @@ $header-height: 60px;
         box-shadow: none;
       }
 
-      >* {
+      > * {
         display: block;
         width: 30px;
         height: 4px;
@@ -111,14 +111,17 @@ $header-height: 60px;
   --link-active-decoration: none;
 
   &__wrapper {
-    @extend .wrapper, .horizontal--smart, .center;
+    @extend .wrapper, .horizontal, .center;
+    flex-wrap: wrap;
+    gap: var(--spacing-smart);
+  }
+
+  &__nav {
+    @extend .flex;
   }
 
   &__logo {
     @extend .horizontal, .center;
-
-    >* {
-      margin: var(--spacing-s);
-    }
+    gap: var(--spacing-smart);
   }
 }
