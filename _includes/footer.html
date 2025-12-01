@@ -13,7 +13,12 @@
         </li>
         {%- endif %} {% endfor -%}
         <li>
-          <a href="mailto:{{site.email}}" class="page-link">Fale conosco</a>
+          <a href="mailto:{{site.email}}" class="page-link">{{site.email}}</a>
+        </li>
+        <li>
+          <a href="tel:{{site.whatsapp.number}}" class="page-link">
+            {{site.whatsapp.label}}
+          </a>
         </li>
       </ul>
     </nav>
@@ -45,3 +50,15 @@
     </div>
   </div>
 </footer>
+
+<div class="site-footer__whatsapp-container">
+  <a
+    class="site-footer__whatsapp-button"
+    target="_blank"
+    href="https://api.whatsapp.com/send?phone={{site.whatsapp.number}}"
+    aria-label="Chamar no WhatsApp"
+    title="Chamar no WhatsApp"
+  >
+    {% include svg/whatsapp.svg %}
+  </a>
+</div>
